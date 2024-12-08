@@ -15,8 +15,8 @@ public class DockerContainersController {
         this.dockerService = dockerService;
     }
 
-    @GetMapping("/")
-    public List<Container> listImages(@RequestParam(required = false, defaultValue = "true")  boolean showAll) {
+    @GetMapping("")
+    public List<Container> listContainer(@RequestParam(required = false, defaultValue = "true")  boolean showAll) {
         return dockerService.listContainers(showAll);
     }
 
